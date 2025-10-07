@@ -3,7 +3,8 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 /* القواعد العامة */
-/* نستخدم هذا لتطبيق القاعدة على جميع العناصر وجعل حساب الأبعاد يشمل الحواف والهوامش الداخلية */
+/* نستخدم هذا لتطبيق القاعدة على جميع العناصر
+ وجعل حساب الأبعاد يشمل الحواف والهوامش الداخلية */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -114,9 +115,9 @@ ul {
   width: 100%;
   height: 30px;
   position: absolute;
- background-image: linear-gradient(135deg, white 25%, transparent 25%),
- linear-gradient(231deg, white 25%, transparent 25%);
- background-size: 50px 50px;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%),
+    linear-gradient(231deg, white 25%, transparent 25%);
+  background-size: 50px 50px;
 }
 .dots {
   background-image: url(../imgs/dots.png);
@@ -135,6 +136,71 @@ ul {
 }
 /* end Main-title */
 /* end global rules */
+/* Loading */
+
+/* === LOADING OVERLAY === */
+body.load {
+  height: 100vh;
+  overflow: hidden;
+}
+body.load *:not(.Loader) {
+  opacity: 0;
+  transition: 1s;
+  pointer-events: none;
+}
+.Loader {
+  position: fixed;
+  background-color: #111;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.Loader.load {
+  transform: translateY(100%);
+  opacity: 0;
+}
+.Loader::before,
+.Loader::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-width: 4px;
+}
+.Loader::before {
+  width: 100px;
+  height: 100px;
+  border-color: #009688;
+  border-style: solid dotted solid dotted;
+  animation: move-left 1s linear infinite;
+}
+.Loader::after {
+  width: 50px;
+  height: 50px;
+  border-style: dotted solid dotted solid;
+  border-color: #0075ff;
+  animation: move-right 2s linear infinite;
+}
+@keyframes move-left {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+@keyframes move-right {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-1turn);
+  }
+}
+
+/* end loading */
 /* header start */
 header {
   background-color: white;
@@ -946,6 +1012,7 @@ header .mega-menu .links li a i {
   top: 0;
   height: 100%;
   background-color: var(--main-color);
+  transition: 0.5s;
 }
 /* end skills */
 /* how Work ? */
