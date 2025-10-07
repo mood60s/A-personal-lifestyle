@@ -9,7 +9,9 @@
     <!-- font awesome libray -->
     <link rel="stylesheet" href="css/mystyle.css" />
   </head>
-  <body>
+  <body class="load">
+    <div class="Loader"></div>
+
     <!-- start header -->
     <header id="header">
       <div class="container">
@@ -33,10 +35,14 @@
                   >
                 </li>
                 <li>
-                  <a href="#team"><i class="far fa-user fa-fw"></i> Team Members</a>
+                  <a href="#team"
+                    ><i class="far fa-user fa-fw"></i> Team Members</a
+                  >
                 </li>
                 <li>
-                  <a href="#services"><i class="far fa-building fa-fw"></i> Services</a>
+                  <a href="#services"
+                    ><i class="far fa-building fa-fw"></i> Services</a
+                  >
                 </li>
                 <li>
                   <a href="#skill"
@@ -68,7 +74,9 @@
                   >
                 </li>
                 <li>
-                  <a href="#stat"><i class="far fa-chart-bar fa-fw"></i> Stats</a>
+                  <a href="#stat"
+                    ><i class="far fa-chart-bar fa-fw"></i> Stats</a
+                  >
                 </li>
                 <li>
                   <a href="#request"
@@ -217,8 +225,8 @@
       </div>
     </section>
     <!-- Spikes Start -->
-      <div class="spikes"></div>
-     <!-- Spikes End -->
+    <div class="spikes"></div>
+    <!-- Spikes End -->
     <!-- end Articles -->
     <!-- Section gallery -->
     <section class="gallery" id="gallery">
@@ -647,6 +655,7 @@
     </section>
     <!--  End Services -->
     <!-- Skills Start -->
+
     <section class="our-skills" id="skill">
       <h2 class="main-title">Our Skills</h2>
       <div class="container">
@@ -655,30 +664,31 @@
           <div class="skill">
             <h3>HTML <span>80%</span></h3>
             <div class="prog">
-              <span style="width: 80%"></span>
+              <span style="width: 0%" data-width="80%"></span>
             </div>
           </div>
           <div class="skill">
             <h3>CSS <span>85%</span></h3>
             <div class="prog">
-              <span style="width: 85%"></span>
+              <span style="width: 0%" data-width="85%"></span>
             </div>
           </div>
           <div class="skill">
             <h3>JavaScript <span>70%</span></h3>
             <div class="prog">
-              <span style="width: 70%"></span>
+              <span style="width: 0%" data-width="70%"></span>
             </div>
           </div>
           <div class="skill">
             <h3>Python <span>80%</span></h3>
             <div class="prog">
-              <span style="width: 80%"></span>
+              <span style="width: 0%" data-width="80%"></span>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Skills End -->
     <!-- how it work -->
     <section class="work-steps" id="how">
@@ -722,7 +732,7 @@
     <!-- end how it work -->
     <!-- Start Events -->
     <section class="events" id="events">
-      <div class=" dots dots-up"></div>
+      <div class="dots dots-up"></div>
       <div class="dots dots-down"></div>
       <h2 class="main-title">Latest Evenets,</h2>
       <div class="container">
@@ -765,7 +775,7 @@
     <!-- end Events -->
     <!-- pricing plan -->
     <section class="pricing" id="price">
-      <div class=" dots dots-up"></div>
+      <div class="dots dots-up"></div>
       <div class="dots dots-down"></div>
       <h2 class="main-title">Pricing Plans</h2>
       <div class="container">
@@ -854,22 +864,22 @@
       <div class="container">
         <div class="box">
           <i class="far fa-user fa-2x fa-fw"></i>
-          <span class="number">300</span>
+          <span class="number" data-goal="300">0</span>
           <span class="text">Clients</span>
         </div>
         <div class="box">
           <i class="fas fa-code fa-2x fa-fw"></i>
-          <span class="number">400</span>
+          <span class="number" data-goal="400">0</span>
           <span class="text">Projects</span>
         </div>
         <div class="box">
           <i class="fas fa-globe-asia fa-2x fa-fw"></i>
-          <span class="number">12</span>
+          <span class="number" data-goal="12">0</span>
           <span class="text">Countries</span>
         </div>
         <div class="box">
           <i class="far fa-money-bill-alt fa-2x fa-fw"></i>
-          <span class="number">500K</span>
+          <span class="number" data-goal="500">0</span>
           <span class="text">Money</span>
         </div>
       </div>
@@ -993,16 +1003,17 @@
           </div>
         </div>
         <div class="box footer-gallery">
-          <img src="imgs/gallery-01.png" alt="">
-          <img src="imgs/gallery-02.png" alt="">
-          <img src="imgs/gallery-03.jpg" alt="">
-          <img src="imgs/gallery-04.png" alt="">
-          <img src="imgs/gallery-05.jpg" alt="">
-          <img src="imgs/gallery-06.png" alt="">
+          <img src="imgs/gallery-01.png" alt="" />
+          <img src="imgs/gallery-02.png" alt="" />
+          <img src="imgs/gallery-03.jpg" alt="" />
+          <img src="imgs/gallery-04.png" alt="" />
+          <img src="imgs/gallery-05.jpg" alt="" />
+          <img src="imgs/gallery-06.png" alt="" />
         </div>
       </div>
       <p class="copyright">Made With &lt;3 Elzero <span>Coded mood60s</span></p>
     </section>
     <!-- end footer -->
+    <script src="js/main.js"></script>
   </body>
 </html>
