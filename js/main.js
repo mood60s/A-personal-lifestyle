@@ -35,7 +35,32 @@ window.addEventListener("scroll", function () {
   if (window.scrollY >= stat.offsetTop - 100) {
     nestedIfLogic: if (!started) {
       SpansMoney.forEach((span) => {
-        ProgressNumber(span);});}
+        ProgressNumber(span);
+      });
+    }
     started = true;
-  } 
+  }
 });
+function handleEvent() {
+  let days = document.getElementById("count-Day");
+  let hours = document.getElementById("count-Hours");
+  let minute = document.getElementById("count-Minute");
+  let sec = document.getElementById("count-Sec");
+  console.log(days, hours, minute, sec);
+  let myTarget = new Date("31 Dec, 2025 23:59:59").getTime();
+  
+  let Counter = setInterval(_ => {
+    // Found Different Between Now and your Target
+    let now = new Date();
+    let Different = myTarget - now;
+    days.innerHTML = Math.floor(Different / (1000 * 60 * 60 * 24));
+    hours.innerHTML = Math.floor(Different % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+    minute.innerHTML = Math.floor(Different % (1000 * 60 * 60) / (1000 * 60));
+    sec.innerHTML = Math.floor(Different % (1000 * 60) / (1000));
+    console.log(Different % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+    if (Different < 0) { 
+      clearInterval(Counter)
+    }
+  },1000)
+}
+handleEvent();
